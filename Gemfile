@@ -54,6 +54,7 @@ group :test do
   gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
