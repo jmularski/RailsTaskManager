@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <title>Code coverage for Wesale</title>
+    <title>Code coverage for Taskmanager</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.2/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.2/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-01-24T23:37:45+01:00">2019-01-24T23:37:45+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-07T19:39:02+01:00">2019-02-07T19:39:02+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.37%</span></span>
+    (<span class="covered_percent"><span class="green">98.15%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.41
+         5.22
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>5</b> files in total.
-    <b>38</b> relevant lines. 
-    <span class="green"><b>37</b> lines covered</span> and
+    <b>7</b> files in total.
+    <b>54</b> relevant lines. 
+    <span class="green"><b>53</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,9 +51,9 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#1a287f13cb4ef913ae31c61c115ba5bcdbcda829" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="strong"><a href="#7650f0cd28bd8e253ef76f508f07f1f3053b4ae1" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>2</td>
+        <td>4</td>
         <td>1</td>
         <td>1</td>
         <td>0</td>
@@ -61,29 +61,49 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#3ec6fea7da3cc29ae2b71465434ea3bdc3d3dd84" class="src_link" title="app/controllers/leader/authentication_controller.rb">app/controllers/leader/authentication_controller.rb</a></td>
+        <td class="strong"><a href="#9b9cd1f08ba290e57a72341cc60b8eac31a6b257" class="src_link" title="app/controllers/authentication/authentication_controller.rb">app/controllers/authentication/authentication_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>33</td>
-        <td>16</td>
-        <td>16</td>
+        <td>43</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
-        <td>7.8</td>
+        <td>9.3</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#1623d978b250156763fb0587cdebab6d0b411f94" class="src_link" title="lib/token_utils.rb">lib/token_utils.rb</a></td>
+        <td class="strong"><a href="#967b602c27080ad75aaef5da4592efe25b63c8d4" class="src_link" title="app/mailers/application_mailer.rb">app/mailers/application_mailer.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>6</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#dc380d6af5703bf68baf31300d049d5a0281e851" class="src_link" title="app/mailers/registration_mailer.rb">app/mailers/registration_mailer.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>16</td>
+        <td>9</td>
+        <td>9</td>
+        <td>0</td>
+        <td>3.8</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#4e546578db691edcc134f32182b0e26d54d3a2e5" class="src_link" title="lib/token_utils.rb">lib/token_utils.rb</a></td>
         <td class="yellow strong">87.5 %</td>
         <td>15</td>
         <td>8</td>
         <td>7</td>
         <td>1</td>
-        <td>2.6</td>
+        <td>4.6</td>
       </tr>
       
       <tr>
-        <td class="strong"><a href="#1afd2179c1b6e8551b359b7370d74930e0eb17e6" class="src_link" title="spec/factories_spec.rb">spec/factories_spec.rb</a></td>
+        <td class="strong"><a href="#619d36f4575c7be5472ac59e27223e374cd20e83" class="src_link" title="spec/factories_spec.rb">spec/factories_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>9</td>
+        <td>11</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -91,9 +111,9 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#1cf572dfef8936305147016a09bf3eed6e868350" class="src_link" title="spec/models/leader_spec.rb">spec/models/leader_spec.rb</a></td>
+        <td class="strong"><a href="#f774bb555fe748f8f995f3c9d28834cc50287834" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>14</td>
+        <td>16</td>
         <td>8</td>
         <td>8</td>
         <td>0</td>
@@ -116,7 +136,7 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="1a287f13cb4ef913ae31c61c115ba5bcdbcda829">
+        <div class="source_table" id="7650f0cd28bd8e253ef76f508f07f1f3053b4ae1">
   <div class="header">
     <h3>app/controllers/application_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -130,41 +150,10 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class ApplicationController &lt; ActionController::API</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
+        <li class="never" data-hits="" data-linenumber="1">
           
           
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-
-      
-        <div class="source_table" id="3ec6fea7da3cc29ae2b71465434ea3bdc3d3dd84">
-  <div class="header">
-    <h3>app/controllers/leader/authentication_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Leader::AuthenticationController &lt; ApplicationController</code>
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -176,73 +165,116 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def signin</code>
+          <code class="ruby">class ApplicationController &lt; ActionController::API</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="4">
-          <span class="hits">10</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">    user = Leader.find_by_email(user_params[:email])</code>
+          
+          <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="9b9cd1f08ba290e57a72341cc60b8eac31a6b257">
+  <div class="header">
+    <h3>app/controllers/authentication/authentication_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># frozen_string_literal: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="6">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
-          <code class="ruby">    unless user</code>
+          <code class="ruby">class Authentication::AuthenticationController &lt; ApplicationController</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="7">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          <code class="ruby">      return render json: {error: &#39;User with that email does not exist&#39;, result: &#39;failure&#39;}, status: 401</code>
+          <code class="ruby">  def signin</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="5">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    user = User.find_by(email: user_params[:email])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="7">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    return render json: {error: &quot;You have inserted wrong email&quot;}, status: :unauthorized unless user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="10">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="9">
+          <span class="hits">6</span>
           
           <code class="ruby">    if user.authenticate(user_params[:password])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
+        <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
           <code class="ruby">      render json: {token: TokenUtils.encode(id: user.id)}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="12">
+          <span class="hits">4</span>
           
-          <code class="ruby">      render json: {error: &#39;You have inserted wrong password&#39;, result: &#39;failure&#39;}, status: 401</code>
+          <code class="ruby">      render json: {error: &quot;You have inserted wrong password&quot;}, status: :unauthorized</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -254,97 +286,97 @@
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  # fix - check for registration type = nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def signup</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="19">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="20" data-linenumber="18">
+          <span class="hits">20</span>
           
-          <code class="ruby">    user = Leader.new(user_params)</code>
+          <code class="ruby">    user = User.new(email: user_params[:email], password: user_params[:password])</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="20">
-          <span class="hits">18</span>
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="20" data-linenumber="20">
+          <span class="hits">20</span>
           
           <code class="ruby">    if user.save</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="21">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="12" data-linenumber="21">
+          <span class="hits">12</span>
           
-          <code class="ruby">      render json: {token: TokenUtils.encode(id: user.id), result: &#39;success&#39;}</code>
+          <code class="ruby">      RegistrationMailer.with(email: user[:email]).welcome_email.deliver_later</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="12" data-linenumber="22">
+          <span class="hits">12</span>
+          
+          <code class="ruby">      render json: {token: TokenUtils.encode(id: user[:id])}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="23">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="8" data-linenumber="24">
+          <span class="hits">8</span>
           
-          <code class="ruby">      render json: {error: user.errors.full_messages, result: &#39;failure&#39;}, status: 401</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      render json: {error: user.errors.full_messages}, status: :unauthorized unless user.save</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def user_params</code>
-        </li>
-      
-        <li class="covered" data-hits="32" data-linenumber="30">
-          <span class="hits">32</span>
-          
-          <code class="ruby">    params.require(:authentication).permit(:email, :password)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
           <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def send_reset_password</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="29">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    user = User.find_by(email: user_params[:email])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="31">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    return render json: {error: &quot;User not found&quot;}, status: :unauthorized unless user</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
@@ -356,6 +388,66 @@
         <li class="never" data-hits="" data-linenumber="33">
           
           
+          <code class="ruby">    RegistrationMailer.with(email: user[:email], token: TokenUtils.encode(id: user[:id]))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">                      .reset_password_email</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="35">
+          <span class="hits">2</span>
+          
+          <code class="ruby">                      .deliver_now</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="40">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def user_params</code>
+        </li>
+      
+        <li class="covered" data-hits="62" data-linenumber="41">
+          <span class="hits">62</span>
+          
+          <code class="ruby">    params.require(:authentication).permit(:email, :password, :registration_type, :leader_id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="43">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -364,7 +456,177 @@
 </div>
 
       
-        <div class="source_table" id="1623d978b250156763fb0587cdebab6d0b411f94">
+        <div class="source_table" id="967b602c27080ad75aaef5da4592efe25b63c8d4">
+  <div class="header">
+    <h3>app/mailers/application_mailer.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># frozen_string_literal: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ApplicationMailer &lt; ActionMailer::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  default from: &quot;from@example.com&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  layout &quot;mailer&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="dc380d6af5703bf68baf31300d049d5a0281e851">
+  <div class="header">
+    <h3>app/mailers/registration_mailer.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="never" data-hits="" data-linenumber="1">
+          
+          
+          <code class="ruby"># frozen_string_literal: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class RegistrationMailer &lt; ApplicationMailer</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  default from: &quot;support@wesale.pl&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def welcome_email</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    @email = params[:email]</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="8">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    mail(to: @email, subject: &quot;Welcome to WeSale&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def reset_password_email</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @email = params[:email]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @url = &quot;http://localhost:4000/reset_password?token=#{params[:token]}?time=#{Time.now.to_i}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    mail(to: @email, subject: &quot;Password reset&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="4e546578db691edcc134f32182b0e26d54d3a2e5">
   <div class="header">
     <h3>lib/token_utils.rb</h3>
     <h4><span class="yellow">87.5 %</span> covered</h4>
@@ -378,82 +640,82 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">class TokenUtils</code>
+          
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="2">
           
-          <code class="ruby">  JWT_SECRET = ENV[&quot;JWT_SECRET&quot;]  </code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  class &lt;&lt; self</code>
+          <code class="ruby">class TokenUtils</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    </code>
+          <code class="ruby">  JWT_SECRET = ENV[&quot;JWT_SECRET&quot;]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    def encode(payload, exp = 24.hours.from_now)</code>
+          <code class="ruby">  class &lt;&lt; self</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="6">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    def encode(payload, exp=24.hours.from_now)</code>
+        </li>
+      
+        <li class="covered" data-hits="16" data-linenumber="7">
+          <span class="hits">16</span>
           
           <code class="ruby">      payload[:exp] = exp.to_i</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="7">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="16" data-linenumber="8">
+          <span class="hits">16</span>
           
           <code class="ruby">      JWT.encode(payload, JWT_SECRET)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
           <code class="ruby">    def decode(token)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="12">
           
           
           <code class="ruby">      JWT.decode(token, JWT_SECRET)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -473,7 +735,7 @@
 </div>
 
       
-        <div class="source_table" id="1afd2179c1b6e8551b359b7370d74930e0eb17e6">
+        <div class="source_table" id="619d36f4575c7be5472ac59e27223e374cd20e83">
   <div class="header">
     <h3>spec/factories_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
@@ -487,10 +749,10 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">require &#39;factory_bot&#39;</code>
+          
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -502,40 +764,52 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">FactoryBot.factories.map(&amp;:name).each do |factory_name|</code>
+          <code class="ruby">require &quot;factory_bot&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="4">
           
-          <code class="ruby">  RSpec.describe &quot;Factory #{factory_name}&quot; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &quot;is valid&quot; do</code>
+          <code class="ruby">FactoryBot.factories.map(&amp;:name).each do |factory_name|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">  RSpec.describe &quot;Factory #{factory_name}&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;is valid&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
           <code class="ruby">      expect(build(factory_name)).to be_valid</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
@@ -546,9 +820,9 @@
 </div>
 
       
-        <div class="source_table" id="1cf572dfef8936305147016a09bf3eed6e868350">
+        <div class="source_table" id="f774bb555fe748f8f995f3c9d28834cc50287834">
   <div class="header">
-    <h3>spec/models/leader_spec.rb</h3>
+    <h3>spec/models/user_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>8</b> relevant lines. 
@@ -560,10 +834,10 @@
   <pre>
     <ol>
       
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="1">
           
-          <code class="ruby">require &#39;rails_helper&#39;</code>
+          
+          <code class="ruby"># frozen_string_literal: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -575,70 +849,82 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">RSpec.describe Leader do</code>
+          <code class="ruby">require &quot;rails_helper&quot;</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="4">
-          <span class="hits">5</span>
-          
-          <code class="ruby">  subject {create (:leader) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;validations&#39; do</code>
+          <code class="ruby">RSpec.describe User do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="7">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
-          <code class="ruby">    it { should validate_presence_of(:email) }</code>
+          <code class="ruby">  subject { create :user }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="7">
           
-          <code class="ruby">    it { should validate_uniqueness_of(:email) }</code>
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;validations&quot; do</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="9">
           <span class="hits">2</span>
           
-          <code class="ruby">    it { should_not allow_value(&quot;blah&quot;).for(:email) }</code>
+          <code class="ruby">    it { should validate_presence_of(:email) }</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
+          <code class="ruby">    it { should validate_uniqueness_of(:email) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    it { should_not allow_value(&quot;blah&quot;).for(:email) }</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
           <code class="ruby">    it { should allow_value(&quot;a@b.com&quot;).for(:email) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">  ## Figure out a way to add password test - some problems with BCrypt</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  ## Figure out a way to add password test - some problems with BCrypt</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
