@@ -15,7 +15,7 @@ class Authentication::AuthenticationController < ApplicationController
 
   # fix - check for registration type = nil
   def signup
-    user = User.new(email: user_params[:email], password: user_params[:password])
+    user = User.new(user_params)
 
     if user.save
       RegistrationMailer.with(email: user[:email]).welcome_email.deliver_later
@@ -38,6 +38,6 @@ class Authentication::AuthenticationController < ApplicationController
   private
 
   def user_params
-    params.require(:authentication).permit(:email, :password, :registration_type, :leader_id)
+    params.require(:authentication).permit(:email, :password)
   end
 end
