@@ -37,7 +37,7 @@ gem "dotenv-rails"
 gem "jwt"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem "rack-cors", require: "rack/cors"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,6 +52,7 @@ group :development do
 end
 
 group :test do
+  gem "email_spec"
   gem "factory_bot_rails"
   gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
   gem "rspec-rails"

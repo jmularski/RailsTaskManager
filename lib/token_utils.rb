@@ -9,7 +9,11 @@ class TokenUtils
     end
 
     def decode(token)
-      JWT.decode(token, JWT_SECRET)
+      JWT.decode(token, JWT_SECRET)[0]
+    rescue JWT::ExpiredSignature, JWT::VerificationError => e
+      raise ExceptionHandler::ExpiredSignature, e.message
+    rescue JWT::DecodeError, JWT::VerificationError => e
+      raise ExceptionHandler::DecodeError, e.message
     end
   end
 end

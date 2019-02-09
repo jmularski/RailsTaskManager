@@ -4,6 +4,9 @@ require "rails_helper"
 
 RSpec.describe Authentication::AuthenticationController do
   describe "#signup with" do
+    before(:each) do
+      bypass_rescue
+    end
     subject { post :signup, params: {authentication: leader} }
 
     context "valid params" do
@@ -16,30 +19,26 @@ RSpec.describe Authentication::AuthenticationController do
     context "no email" do
       let(:leader) { attributes_for(:user, email: nil) }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
     context "invalid email" do
       let(:leader) { attributes_for(:user, email: "bad_email") }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
     context "no password" do
       let(:leader) { attributes_for(:user, password: nil) }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
     context "account with that email already exists" do
       before { create(:user, email: "a@a.pl") }
       let(:leader) { attributes_for(:user, email: "a@a.pl") }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
   end
 
@@ -58,26 +57,22 @@ RSpec.describe Authentication::AuthenticationController do
     context "email without signup" do
       let(:leader) { attributes_for(:user) }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
     context "wrong password" do
       before { post :signup, params: {authentication: {email: leader[:email], password: "a"}} }
       let(:leader) { attributes_for(:user) }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
-    ## FIX IT, WRONG TESTS
     context "no email" do
       before { post :signup, params: {authentication: {email: "a@a.pl", password: leader[:password]}} }
 
       let(:leader) { attributes_for(:user, email: nil) }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
     context "no password" do
@@ -85,8 +80,7 @@ RSpec.describe Authentication::AuthenticationController do
 
       let(:leader) { attributes_for(:user, password: nil) }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
   end
 
@@ -105,15 +99,51 @@ RSpec.describe Authentication::AuthenticationController do
     context "no email" do
       let(:email) { nil }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
     context "wrong email" do
       let(:email) { "abcd" }
 
-      it { is_expected.to be_unauthorized }
-      it { check_for_error(subject.body) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
+    end
+  end
+
+  describe "#reset_password" do
+    subject { post :reset_password, params: {authentication: data} }
+
+    context "everything valid" do
+      let(:leader) { create(:user) }
+      let(:data) { {token: TokenUtils.encode({id: leader[:id]}, (Time.now.to_i + 3600).to_s), new_password: "abcd"} }
+
+      it { is_expected.to be_successful }
+      # write test for changing password
+    end
+
+    context "no token" do
+      let(:data) { {token: nil, new_password: "abcd"} }
+
+      it { expect { subject }.to raise_error(ExceptionHandler::DecodeError) }
+    end
+
+    context "invalid token" do
+      let(:data) { {token: "abcd", new_password: "hello"} }
+
+      it { expect { subject }.to raise_error(ExceptionHandler::DecodeError) }
+    end
+
+    context "expired token" do
+      let(:leader) { create(:user) }
+      let(:data) { {token: TokenUtils.encode({id: leader[:id]}, (Time.now.to_i - 5000).to_s), new_password: "abcd"} }
+
+      it { expect { subject }.to raise_error(ExceptionHandler::ExpiredSignature) }
+    end
+
+    context "no password" do
+      let(:leader) { create(:user) }
+      let(:data) { {token: TokenUtils.encode({id: leader[:id]}, (Time.now.to_i + 3600).to_s), new_password: nil} }
+
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
   end
 end

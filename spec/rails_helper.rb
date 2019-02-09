@@ -7,6 +7,7 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'email_spec'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'simplecov'
@@ -74,4 +75,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include FactoryBot::Syntax::Methods
+  config.include EmailSpec::Helpers
+  config.include EmailSpec::Matchers
+  config.include Rails.application.routes.url_helpers
 end

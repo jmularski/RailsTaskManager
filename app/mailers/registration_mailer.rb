@@ -10,7 +10,7 @@ class RegistrationMailer < ApplicationMailer
 
   def reset_password_email
     @email = params[:email]
-    @url = "http://localhost:4000/reset_password?token=#{params[:token]}?time=#{Time.now.to_i}"
+    @url = "http://localhost:4000/reset_password?token=#{params[:token]}"
     mail(to: @email, subject: "Password reset")
   end
 end
