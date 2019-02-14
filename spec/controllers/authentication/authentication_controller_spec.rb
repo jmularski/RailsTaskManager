@@ -110,7 +110,7 @@ RSpec.describe Authentication::AuthenticationController do
   end
 
   describe "#reset_password" do
-    subject { post :reset_password, params: {authentication: data} }
+    subject { get :reset_password, params: {authentication: data} }
 
     context "everything valid" do
       let(:leader) { create(:user) }
@@ -123,7 +123,7 @@ RSpec.describe Authentication::AuthenticationController do
     context "no token" do
       let(:data) { {token: nil, new_password: "abcd"} }
 
-      it { expect { subject }.to raise_error(ExceptionHandler::DecodeError) }
+      it { expect { subject }.to raise_error(ExceptionHandler::AuthenticationError) }
     end
 
     context "invalid token" do

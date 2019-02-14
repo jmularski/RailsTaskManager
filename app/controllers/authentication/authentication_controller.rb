@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Authentication::AuthenticationController < ApplicationController
+
+  skip_before_action :authenticate_user!, :only => [:signin, :signup, :send_reset_password]
+
   def signin
     user = User.find_by(email: user_params[:email])
 
@@ -13,7 +16,6 @@ class Authentication::AuthenticationController < ApplicationController
     end
   end
 
-  # fix - check for registration type = nil
   def signup
     user = User.new(user_params)
 
@@ -36,11 +38,7 @@ class Authentication::AuthenticationController < ApplicationController
   end
 
   def reset_password
-    id = TokenUtils.decode(reset_password_params[:token])["id"]
-
-    user = User.find_by(id: id)
-
-    raise ExceptionHandler::AuthenticationError, "User not found" unless user
+    
     raise ExceptionHandler::AuthenticationError, "Password can't be null" if reset_password_params[:new_password].blank?
 
     # bcrypt doesnt check if password is null or "" on update

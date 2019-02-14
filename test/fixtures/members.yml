@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userId: 
+  projectId: 
+  isAdmin: false
+
+two:
+  userId: 
+  projectId: 
+  isAdmin: false

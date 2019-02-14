@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     post 'signup', to: 'authentication#signup', as: 'signup'
     post 'signin', to: 'authentication#signin', as: 'signin'
     post "send_reset_password", to: "authentication#send_reset_password", as: "send_reset_password"
-    post "reset_password", to: "authentication#reset_password", as: "reset_password"
+    get "reset_password", to: "authentication#reset_password", as: "reset_password"
   end
 end
